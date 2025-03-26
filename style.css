@@ -1,1 +1,167 @@
+:root {
+    --primary: #009688;  /* Material Teal */
+    --secondary: #FF5722; /* Deep Orange */
+    --background: #FAFAFA;
+    --surface: #FFFFFF;
+    --on-primary: #FFFFFF;
+    --text: #212121;
+    --error: #B00020;
+}
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: var(--background);
+    color: var(--text);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    gap: 24px;
+}
+
+/* Cards */
+.time-card, .task-card {
+    background: var(--surface);
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Timer Display */
+.timer {
+    font-size: 72px;
+    font-weight: 300;
+    text-align: center;
+    margin: 32px 0;
+    color: var(--primary);
+    transition: color 0.3s;
+}
+
+/* Controls */
+.timer-controls {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.mdc-button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 28px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.mdc-button--raised {
+    background: var(--primary);
+    color: var(--on-primary);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+.mdc-button--outlined {
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    background: transparent;
+}
+
+/* Duration Controls */
+.duration-controls {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.duration-input input {
+    padding: 12px;
+    border: 2px solid #E0E0E0;
+    border-radius: 8px;
+    font-size: 16px;
+    width: 100%;
+    margin-top: 8px;
+}
+
+/* Task Management */
+.task-input {
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+#taskInput {
+    flex: 1;
+    padding: 14px;
+    border: 2px solid #E0E0E0;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.task-list {
+    list-style: none;
+    margin-top: 24px;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    background: #FFF;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    gap: 12px;
+}
+
+.task-item.completed {
+    opacity: 0.6;
+}
+
+/* Time Manipulation */
+.time-manipulation {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin: 16px 0;
+}
+
+.mdc-icon-button {
+    padding: 12px;
+    border: none;
+    background: var(--primary);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.mdc-icon-button:hover {
+    transform: scale(1.1);
+}
+
+/* Date Display */
+.date-display {
+    text-align: center;
+    font-size: 18px;
+    color: #757575;
+    margin-bottom: 16px;
+}
+
+.session-counter {
+    text-align: center;
+    color: #616161;
+    font-size: 14px;
+}
