@@ -1,1 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Material Pomo Timer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Time Section -->
+        <div class="time-card">
+            <div class="date-display" id="dateDisplay"></div>
+            <div class="timer" id="timer">25:00</div>
+            
+            <div class="time-manipulation">
+                <button class="mdc-icon-button" id="addMinute">
+                    <img src="icons/add.svg" alt="+1m">
+                </button>
+                <button class="mdc-icon-button" id="subtractMinute">
+                    <img src="icons/remove.svg" alt="-1m">
+                </button>
+            </div>
 
+            <div class="timer-controls">
+                <button class="mdc-button mdc-button--raised" id="startBtn">
+                    <span class="material-icons">play_arrow</span>
+                </button>
+                <button class="mdc-button mdc-button--outlined" id="resetBtn">
+                    <span class="material-icons">replay</span>
+                </button>
+            </div>
+
+            <div class="duration-controls">
+                <div class="duration-input">
+                    <label>Work (mins)</label>
+                    <input type="number" id="workDuration" value="25" min="1">
+                </div>
+                <div class="duration-input">
+                    <label>Break (mins)</label>
+                    <input type="number" id="breakDuration" value="5" min="1">
+                </div>
+            </div>
+
+            <div class="session-counter" id="sessionCounter">
+                Sessions Completed: 0
+            </div>
+        </div>
+
+        <!-- Task Section -->
+        <div class="task-card">
+            <div class="task-header">
+                <h2>Today's Tasks</h2>
+                <div class="task-input">
+                    <input type="text" id="taskInput" placeholder="Add new task">
+                    <button id="addTask" class="mdc-icon-button">
+                        <img src="icons/add.svg" alt="Add">
+                    </button>
+                </div>
+            </div>
+            <ul class="task-list" id="taskList"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
